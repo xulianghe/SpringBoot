@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.studentselectcourse.dao.StudentMapper">
+    <resultMap id="BaseResultMap" type="com.example.studentselectcourse.domain.Student">
+        <result column="Sno" jdbcType="CHAR" property="Sno" />
+        <result column="Sname" jdbcType="CHAR" property="Sname" />
+        <result column="Ssex" jdbcType="CHAR" property="Ssex" />
+        <result column="Sage" jdbcType="SMALLINT" property="Sage" />
+        <result column="Sdept" jdbcType="CHAR" property="Sdept" />
+    </resultMap>
+    <select id="getStudent" resultType="com.example.studentselectcourse.domain.Student">
+        SELECT * FROM student where Sno = #{Sno};
+    </select>
+
+    <insert id="addStudent" parameterType="com.example.studentselectcourse.domain.Student">
+        insert into student(Sno,Sname,Ssex,Sage,Sdept)
+        values (#{Sno},#{Sname},#{Ssex},#{Sage},#{Sdept});
+    </insert>
+
+</mapper>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Student!</title>
+</head>
+<body>
+<h1>Hello world!</h1>
+<form method="post" action="/testBoot/addStudent">
+    <label for="Sno">学号:</label>
+    <input type="text" name="Sno" size="15"></input><br/>
+    <label for="Sname">姓名:</label>
+    <input type="text" name="Sname" size="15"></input><br/>
+    <label for="Ssex">性别:</label>
+    <input type="text" name="Ssex" size="15"></input><br/>
+    <label for="Sage">年龄:</label>
+    <input type="text" name="Sage" size="15"></input><br/>
+    <label for="Sdept">院系:</label>
+    <input type="text" name="Sdept" size="15"></input><br/>
+    <input type="submit" value="提交"></input>
+</form>
+<br>
+<h2>使用学号查询学生信息!使用路径参数</h2>
+<a href="/testBoot/getStudent/202015121">202015121</a><br />
+<a href="/testBoot/getStudent/202015122">202015122</a><br />
+<a href="/testBoot/getStudent/202015123">202015123</a><br />
+<a href="/testBoot/getStudent/202015124">202015124</a><br />
+<a href="/testBoot/getStudent/202015125">202015125</a><br />
+<a href="/testBoot/getStudent/202015126">202015126</a><br />
+<br />
+<h2>使用查询参数查询学生，输入学号！</h2><br />
+<form method="get" action="/testBoot/getStudent1/">
+    <input type="text" name="Sno" size="15"></input><br/>
+    <input type="submit" value="查询"></input>
+</form>
+</body>
+</html>

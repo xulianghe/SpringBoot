@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h2>Welcome to Student information!</h2>
+<!--<span th:text="'Welcome to our application, ' + ${student.Sno} + '!'">-->
+<span th:text="'Welcome to our springboot application, student Sno======' + '学号：^^_^^ = ' +${student.Sno} + '=^^_^^'"></span> <br />
+<span th:text="'Welcome to our springboot application, student Sname======' + '姓名^^_^^ = ' +${student.Sname} + '=^^_^^'"></span> <br />
+<span th:text="'Welcome to our springboot application, student Ssex======' + '性别^^_^^ = '+ ${student.Ssex} + '=^^_^^'"></span> <br />
+<span th:text="'Welcome to our springboot application, student Sage======' + '年龄 = '+${student.Sage} "></span> <br />
+<span th:text="'Welcome to our springboot application student Sdept======= ' + '系别^^_^^ = '+${student.Sdept} + '=^^_^^'"></span> <br />
+
+<hr />
+
+<h3>增加一个学生</h3>
+<form action="/testBoot/redirectMethod" method="get">
+    <input type="submit" value="增加一个学生！"></input>
+</form>
+
+
+<!--
+<form method="post">
+    <label for="Sno">学号:</label>
+        <input type="text" name="Sno" size="15"></input><br/>
+    <label for="Sname">姓名:</label>
+        <input type="text" name="Sname" size="15"></input><br/>
+    <label for="Ssex">性别:</label>
+        <input type="text" name="Ssex" size="15"></input><br/>
+    <label for="Sage">年龄:</label>
+        <input type="text" name="Sage" size="15"></input><br/>
+    <label for="Sdept">院系:</label>
+        <input type="text" name="Sdept" size="15"></input><br/>
+    <input type="submit" value="提交"></input>
+</form>
+-->
+
+
+</body>
+</html>
